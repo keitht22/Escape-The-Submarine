@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://menus/Satisfy-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://menus/BigShouldersStencilDisplay-Black.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://menus/credits.jpg" type="Texture" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 30
@@ -21,6 +22,10 @@ margin_bottom = 600.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 512, 300 )
+texture = ExtResource( 3 )
 
 [node name="Label" type="Label" parent="."]
 anchor_left = 0.5
@@ -68,7 +73,7 @@ margin_bottom = 116.674
 custom_fonts/font = SubResource( 2 )
 text = "Scripting
 
-Art
+Environment  Assets
 
 Music / Shading"
 align = 2

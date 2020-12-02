@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://back/Back.gd" type="Script" id=1]
-[ext_resource path="res://items/panel.jpg" type="Texture" id=2]
+[ext_resource path="res://back/back_main.jpg" type="Texture" id=2]
+[ext_resource path="res://items/note2.png" type="Texture" id=3]
 
 [node name="Back" type="Control"]
 script = ExtResource( 1 )
@@ -24,42 +25,27 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Panel" type="Sprite" parent="."]
-position = Vector2( 730.17, 268.829 )
-scale = Vector2( 0.139733, 0.11729 )
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 511.042, 300.123 )
+rotation = -1.5708
+scale = Vector2( 0.369925, 0.494567 )
 texture = ExtResource( 2 )
 
-[node name="Blue" type="Button" parent="Panel"]
-margin_left = -229.663
-margin_top = -656.4
-margin_right = -0.662598
-margin_bottom = -402.4
+[node name="Panel" type="Button" parent="Sprite"]
+margin_left = 149.0
+margin_top = -551.0
+margin_right = 263.0
+margin_bottom = -393.0
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Red" type="Button" parent="Panel"]
-margin_left = -231.884
-margin_top = -163.4
-margin_right = 6.11621
-margin_bottom = 100.6
-flat = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Green" type="Button" parent="Panel"]
-margin_left = -200.221
-margin_top = 316.943
-margin_right = 7.77881
-margin_bottom = 568.943
-flat = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Note2" type="Sprite" parent="."]
+position = Vector2( 890.962, 185.17 )
+rotation = 0.487482
+scale = Vector2( 0.0245673, 0.022355 )
+texture = ExtResource( 3 )
 [connection signal="pressed" from="Left" to="." method="_on_Left_pressed"]
 [connection signal="pressed" from="Right" to="." method="_on_Right_pressed"]
-[connection signal="pressed" from="Panel/Blue" to="." method="_on_Blue_pressed"]
-[connection signal="pressed" from="Panel/Red" to="." method="_on_Red_pressed"]
-[connection signal="pressed" from="Panel/Green" to="." method="_on_Green_pressed"]
+[connection signal="pressed" from="Sprite/Panel" to="." method="_on_Panel_pressed"]

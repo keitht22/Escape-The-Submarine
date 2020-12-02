@@ -15,13 +15,5 @@ func _on_Right_pressed():
 	get_tree().change_scene("res://left_side/Left_Side.tscn")
 
 
-func _on_Blue_pressed():
-	pass # Replace with function body.
-
-
-func _on_Red_pressed():
-	pass # Replace with function body.
-
-
-func _on_Green_pressed():
-	pass # Replace with function body.
+func _on_Panel_pressed():
+	get_tree().change_scene("res://back/Panel.tscn")
