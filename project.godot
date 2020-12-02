@@ -16,12 +16,12 @@ _global_script_class_icons={
 [application]
 
 config/name="Escape- The- Submarine"
-config/icon="res://icon.png"
+run/main_scene="res://cockpit/Cockpit.tscn"
+
+[autoload]
+
+Global="*res://Global.tscn"
 
 [display]
 
 window/size/resizable=false
-
-[rendering]
-
-environment/default_environment="res://default_env.tres"
