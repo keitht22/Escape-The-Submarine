@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://right_side/Right_Side.gd" type="Script" id=1]
+[ext_resource path="res://items/key.png" type="Texture" id=2]
 
 [node name="Right_Side" type="Control"]
 script = ExtResource( 1 )
@@ -24,5 +25,22 @@ margin_bottom = 600.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Key" type="Sprite" parent="."]
+position = Vector2( 766.786, 369.866 )
+rotation = -1.19024
+scale = Vector2( 0.0437661, 0.0486596 )
+texture = ExtResource( 2 )
+
+[node name="key" type="Button" parent="Key"]
+margin_left = -393.0
+margin_top = -965.0
+margin_right = 353.0
+margin_bottom = 890.0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="Left" to="." method="_on_Left_pressed"]
 [connection signal="pressed" from="Right" to="." method="_on_Right_pressed"]
+[connection signal="pressed" from="Key/key" to="." method="_on_key_pressed"]

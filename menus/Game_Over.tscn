@@ -46,7 +46,7 @@ margin_top = 164.946
 margin_right = 195.277
 margin_bottom = 227.946
 custom_fonts/font = SubResource( 1 )
-text = "Try Again?"
+text = "Give Up"
 __meta__ = {
 "_edit_use_anchors_": false
 }
