@@ -1,12 +1,19 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://cockpit/Cockpit.gd" type="Script" id=1]
+[ext_resource path="res://cockpit/Cockpit.jpg" type="Texture" id=2]
 
 [node name="Cockpit" type="Control"]
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 510.739, 300.79 )
+rotation = -1.57077
+scale = Vector2( 0.336, 0.455 )
+texture = ExtResource( 2 )
 
 [node name="Left" type="Button" parent="."]
 anchor_bottom = 1.0
@@ -24,9 +31,5 @@ margin_bottom = 600.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 504.387, 300.764 )
-scale = Vector2( 0.262489, 0.275246 )
 [connection signal="pressed" from="Left" to="." method="_on_Left_pressed"]
 [connection signal="pressed" from="Right" to="." method="_on_Right_pressed"]

@@ -1,0 +1,77 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://menus/Satisfy-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://menus/BigShouldersStencilDisplay-Black.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 30
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 36
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 2 )
+
+[node name="Control" type="Control"]
+margin_right = 1024.0
+margin_bottom = 600.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -423.5
+margin_top = 64.03
+margin_right = 423.5
+margin_bottom = 108.03
+custom_fonts/font = SubResource( 1 )
+text = "Under Pressure : Escape the Submarine is a product of CPT Game Company
+whose members are:"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -423.5
+margin_top = -116.0
+margin_right = 423.5
+margin_bottom = 116.0
+custom_fonts/font = SubResource( 1 )
+text = "Curtis Howard
+
+Paige Gehlhausen
+
+Tyler Keith"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -423.5
+margin_top = -115.326
+margin_right = 423.5
+margin_bottom = 116.674
+custom_fonts/font = SubResource( 2 )
+text = "Scripting
+
+Art
+
+Music / Shading"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
