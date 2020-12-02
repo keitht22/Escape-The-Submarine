@@ -1,24 +1,44 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://menus/Satisfy-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://menus/BigShouldersStencilDisplay-Black.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://menus/credits.jpg" type="Texture" id=3]
+[ext_resource path="res://menus/Credits.gd" type="Script" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 30
+outline_size = 3
+outline_color = Color( 0.670588, 0.513726, 0.768627, 1 )
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 30
+outline_size = 3
+outline_color = Color( 0.364706, 0.815686, 0.976471, 1 )
 use_mipmaps = true
 use_filter = true
 font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 36
+outline_size = 3
+outline_color = Color( 0.443137, 0.392157, 0.654902, 1 )
 use_mipmaps = true
 use_filter = true
 font_data = ExtResource( 2 )
 
-[node name="Control" type="Control"]
+[sub_resource type="DynamicFont" id=4]
+size = 20
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 2 )
+
+[node name="Credits" type="Control"]
 margin_right = 1024.0
 margin_bottom = 600.0
+script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -35,6 +55,7 @@ margin_top = 64.03
 margin_right = 423.5
 margin_bottom = 108.03
 custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Under Pressure : Escape the Submarine is a product of CPT Game Company
 whose members are:"
 align = 1
@@ -51,7 +72,7 @@ margin_left = -423.5
 margin_top = -116.0
 margin_right = 423.5
 margin_bottom = 116.0
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 3 )
 text = "Curtis Howard
 
 Paige Gehlhausen
@@ -67,10 +88,11 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -423.5
-margin_top = -115.326
+margin_top = -114.653
 margin_right = 423.5
-margin_bottom = 116.674
+margin_bottom = 117.347
 custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.952941, 0.976471, 0.980392, 1 )
 text = "Scripting
 
 Environment  Assets
@@ -80,3 +102,15 @@ align = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Button" type="Button" parent="."]
+margin_left = 954.532
+margin_top = 528.772
+margin_right = 1018.53
+margin_bottom = 592.772
+custom_fonts/font = SubResource( 4 )
+text = "Back"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

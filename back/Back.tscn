@@ -10,21 +10,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Left" type="Button" parent="."]
-margin_right = 53.0
-margin_bottom = 600.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Right" type="Button" parent="."]
-margin_left = 971.0
-margin_right = 1024.0
-margin_bottom = 600.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 511.042, 300.123 )
 rotation = -1.5708
@@ -41,11 +26,26 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Left" type="Button" parent="."]
+margin_right = 53.0
+margin_bottom = 600.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Right" type="Button" parent="."]
+margin_left = 971.0
+margin_right = 1024.0
+margin_bottom = 600.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Note2" type="Sprite" parent="."]
 position = Vector2( 890.962, 185.17 )
 rotation = 0.487482
 scale = Vector2( 0.0245673, 0.022355 )
 texture = ExtResource( 3 )
+[connection signal="pressed" from="Sprite/Panel" to="." method="_on_Panel_pressed"]
 [connection signal="pressed" from="Left" to="." method="_on_Left_pressed"]
 [connection signal="pressed" from="Right" to="." method="_on_Right_pressed"]
-[connection signal="pressed" from="Sprite/Panel" to="." method="_on_Panel_pressed"]
