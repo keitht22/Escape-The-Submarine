@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://right_side/Vent.gd" type="Script" id=1]
+
+[node name="Exit" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Hatch" type="Button" parent="."]
+margin_left = 402.602
+margin_top = 160.66
+margin_right = 597.602
+margin_bottom = 351.66
+
+[node name="Return" type="Button" parent="."]
+margin_left = 1.0
+margin_top = 520.0
+margin_right = 1029.0
+margin_bottom = 598.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Return" to="." method="_on_Return_pressed"]

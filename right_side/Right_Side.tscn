@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://right_side/Right_Side.gd" type="Script" id=1]
+[ext_resource path="res://right_side/right_side.jpg" type="Texture" id=2]
 
 [node name="Right_Side" type="Control"]
 script = ExtResource( 1 )
@@ -8,10 +9,17 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 512.398, 300.278 )
+rotation = -1.5708
+scale = Vector2( 0.336265, 0.457797 )
+texture = ExtResource( 2 )
+
 [node name="Left" type="Button" parent="."]
 anchor_bottom = 1.0
 margin_right = 53.0
 margin_bottom = 600.0
+flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -21,8 +29,23 @@ anchor_bottom = 1.0
 margin_left = 971.0
 margin_right = 1024.0
 margin_bottom = 600.0
+flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Vent" type="Button" parent="."]
+margin_left = 726.0
+margin_top = 429.0
+margin_right = 910.0
+margin_bottom = 529.0
+
+[node name="Ladder" type="Button" parent="."]
+margin_left = 342.0
+margin_top = -1.0
+margin_right = 527.0
+margin_bottom = 475.0
 [connection signal="pressed" from="Left" to="." method="_on_Left_pressed"]
 [connection signal="pressed" from="Right" to="." method="_on_Right_pressed"]
+[connection signal="pressed" from="Vent" to="." method="_on_Vent_pressed"]
+[connection signal="pressed" from="Ladder" to="." method="_on_Ladder_pressed"]
