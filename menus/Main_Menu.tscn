@@ -1,0 +1,112 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://menus/Satisfy-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://menus/BigShouldersStencilDisplay-Black.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://menus/Main_Menu.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 42
+outline_size = 3
+outline_color = Color( 0.533333, 0.196078, 0.196078, 1 )
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 48
+outline_size = 6
+outline_color = Color( 0.282353, 0.266667, 0.4, 1 )
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 29
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 1 )
+
+[node name="Main_Menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -141.999
+margin_top = -92.81
+margin_right = 142.0
+margin_bottom = -22.8097
+custom_fonts/font = SubResource( 1 )
+text = "Under Pressure"
+align = 1
+valign = 2
+
+[node name="Label2" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -214.0
+margin_top = -29.5
+margin_right = 214.0
+margin_bottom = 29.5
+custom_fonts/font = SubResource( 2 )
+text = "ESCAPE THE SUBMARINE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Start" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -93.337
+margin_top = 120.0
+margin_right = 93.3372
+margin_bottom = 183.0
+custom_fonts/font = SubResource( 3 )
+text = "Start"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Credits" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -301.399
+margin_top = 120.0
+margin_right = -114.725
+margin_bottom = 183.0
+custom_fonts/font = SubResource( 3 )
+text = "Credits"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Quit" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 116.493
+margin_top = 120.0
+margin_right = 303.167
+margin_bottom = 183.0
+custom_fonts/font = SubResource( 3 )
+text = "Quit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Start" to="." method="_on_Start_pressed"]
+[connection signal="pressed" from="Credits" to="." method="_on_Credits_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_Quit_pressed"]

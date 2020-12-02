@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Escape- The- Submarine"
-run/main_scene="res://cockpit/Cockpit.tscn"
+run/main_scene="res://menus/Main_Menu.tscn"
 
 [autoload]
 
@@ -25,3 +25,5 @@ Global="*res://Global.tscn"
 [display]
 
 window/size/resizable=false
+window/size/fullscreen=true
+window/stretch/mode="viewport"

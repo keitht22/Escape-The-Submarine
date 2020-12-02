@@ -24,5 +24,9 @@ margin_bottom = 600.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 504.387, 300.764 )
+scale = Vector2( 0.262489, 0.275246 )
 [connection signal="pressed" from="Left" to="." method="_on_Left_pressed"]
 [connection signal="pressed" from="Right" to="." method="_on_Right_pressed"]
