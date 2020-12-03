@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://left_side/Chest.gd" type="Script" id=1]
+
+[node name="Chest" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Wheel" type="Sprite" parent="."]
+position = Vector2( 670.508, 282.28 )
+
+[node name="wheel" type="Button" parent="Wheel"]
+margin_left = -122.988
+margin_top = -86.6845
+margin_right = 174.012
+margin_bottom = 180.315
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Wheel/wheel" to="." method="_on_wheel_pressed"]

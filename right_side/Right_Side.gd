@@ -16,8 +16,11 @@ func _on_Right_pressed():
 
 
 func _on_Vent_pressed():
+# warning-ignore:return_value_discarded
+#	change this to addto inventory and delete scene
 	get_tree().change_scene("res://right_side/Vent.tscn")
 
 
 func _on_Ladder_pressed():
+# warning-ignore:return_value_discarded
 	get_tree().change_scene("res://right_side/Exit.tscn")

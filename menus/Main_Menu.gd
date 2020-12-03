@@ -13,6 +13,7 @@ func _on_Start_pressed():
 
 
 func _on_Credits_pressed():
+# warning-ignore:return_value_discarded
 	get_tree().change_scene("res://menus/Credits.tscn")
 
 

@@ -16,4 +16,5 @@ func _on_Right_pressed():
 
 
 func _on_Panel_pressed():
+# warning-ignore:return_value_discarded
 	get_tree().change_scene("res://back/Panel.tscn")

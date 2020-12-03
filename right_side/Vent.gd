@@ -6,4 +6,5 @@ func _ready():
 
 
 func _on_Return_pressed():
-	get_tree().change_scene("res://right_side/Right_Side.tscn")
+# warning-ignore:return_value_discarded
+	get_tree().change_scene("res://back/Back.tscn")
