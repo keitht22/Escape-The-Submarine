@@ -11,8 +11,27 @@ func _on_Return_pressed():
 
 
 func _on_bag_pressed():
-	pass # Replace with function body.
+	Global.hasBag = true
+	$Inventory/Bag.visible = true
+	$open_locker/bag.queue_free()
 
 
 func _on_magnet_pressed():
-	pass # Replace with function body.
+	Global.hasMagnet = true
+	$Inventory/Magnet.visible = true
+	$open_locker/magnet.queue_free()
+
+
+func _on_ToggleInventory_pressed():
+	if $Inventory.visible == true:
+		$Inventory.visible = false
+	else:
+		if Global.hasKey == true:
+			$Inventory/Key.visible = true
+		if Global.hasMagnet == true:
+			$Inventory/Magnet.visible = true
+		if Global.hasWheel == true:
+			$Inventory/Wheel.visible = true
+		if Global.hasBag == true:
+			$Inventory/Bag.visible = true
+		$Inventory.visible = true

@@ -1,8 +1,12 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://back/Back.gd" type="Script" id=1]
 [ext_resource path="res://back/back_main.png" type="Texture" id=2]
 [ext_resource path="res://items/note2.png" type="Texture" id=3]
+[ext_resource path="res://items/magnet.png" type="Texture" id=4]
+[ext_resource path="res://items/wheel.png" type="Texture" id=5]
+[ext_resource path="res://items/bag.png" type="Texture" id=6]
+[ext_resource path="res://items/key.png" type="Texture" id=7]
 
 [node name="Back" type="Control"]
 script = ExtResource( 1 )
@@ -57,7 +61,62 @@ position = Vector2( 890.962, 185.17 )
 rotation = 0.487482
 scale = Vector2( 0.0245673, 0.022355 )
 texture = ExtResource( 3 )
+
+[node name="Inventory" type="Control" parent="."]
+visible = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InventoryBG" type="ColorRect" parent="Inventory"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = 225.0
+margin_top = 10.0
+margin_right = 815.0
+margin_bottom = 100.0
+color = Color( 0.552941, 0.552941, 0.552941, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bag" type="Sprite" parent="Inventory"]
+visible = false
+position = Vector2( 755.456, 45.5813 )
+scale = Vector2( 0.05, 0.04 )
+texture = ExtResource( 6 )
+
+[node name="Wheel" type="Sprite" parent="Inventory"]
+visible = false
+position = Vector2( 599.716, 57.2354 )
+scale = Vector2( 0.0472156, 0.0400875 )
+texture = ExtResource( 5 )
+
+[node name="Magnet" type="Sprite" parent="Inventory"]
+visible = false
+position = Vector2( 422.785, 49.8192 )
+scale = Vector2( 0.05, 0.0422667 )
+texture = ExtResource( 4 )
+
+[node name="Key" type="Sprite" parent="Inventory"]
+visible = false
+position = Vector2( 271.282, 55.1165 )
+scale = Vector2( 0.05, 0.0422667 )
+texture = ExtResource( 7 )
+
+[node name="ToggleInventory" type="Button" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = 880.016
+margin_top = 28.6055
+margin_right = 953.016
+margin_bottom = 68.6055
+text = "Inventory"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="Sprite/Panel" to="." method="_on_Panel_pressed"]
 [connection signal="pressed" from="Sprite/Locker" to="." method="_on_Locker_pressed"]
 [connection signal="pressed" from="Left" to="." method="_on_Left_pressed"]
 [connection signal="pressed" from="Right" to="." method="_on_Right_pressed"]
+[connection signal="pressed" from="ToggleInventory" to="." method="_on_ToggleInventory_pressed"]
