@@ -18,3 +18,8 @@ func _on_Right_pressed():
 func _on_Panel_pressed():
 # warning-ignore:return_value_discarded
 	get_tree().change_scene("res://back/Panel.tscn")
+
+
+func _on_Locker_pressed():
+	#	pop up that says it is locked
+	pass

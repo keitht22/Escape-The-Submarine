@@ -1,24 +1,48 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://left_side/Chest.gd" type="Script" id=1]
+[ext_resource path="res://items/wheel.png" type="Texture" id=1]
+[ext_resource path="res://left_side/Chest.gd" type="Script" id=2]
+[ext_resource path="res://left_side/chest.png" type="Texture" id=3]
 
 [node name="Chest" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-script = ExtResource( 1 )
+script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Wheel" type="Sprite" parent="."]
-position = Vector2( 670.508, 282.28 )
+[node name="Chest" type="Sprite" parent="."]
+position = Vector2( 513.398, 300.033 )
+rotation = -1.5708
+scale = Vector2( 0.345881, 0.459026 )
+texture = ExtResource( 3 )
 
-[node name="wheel" type="Button" parent="Wheel"]
-margin_left = -122.988
-margin_top = -86.6845
-margin_right = 174.012
-margin_bottom = 180.315
+[node name="Wheel" type="Sprite" parent="Chest"]
+position = Vector2( 143.585, 402.176 )
+rotation = 0.103831
+scale = Vector2( 0.236521, 0.183147 )
+texture = ExtResource( 1 )
+
+[node name="wheel" type="Button" parent="Chest/Wheel"]
+margin_left = -1159.0
+margin_top = -1078.0
+margin_right = 965.0
+margin_bottom = 1239.0
+rect_rotation = -5.9
+flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="pressed" from="Wheel/wheel" to="." method="_on_wheel_pressed"]
+
+[node name="Return" type="Button" parent="Chest"]
+margin_left = -871.0
+margin_top = -1115.0
+margin_right = -443.0
+margin_bottom = 1121.0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Chest/Wheel/wheel" to="." method="_on_wheel_pressed"]
+[connection signal="pressed" from="Chest/Return" to="." method="_on_Return_pressed"]

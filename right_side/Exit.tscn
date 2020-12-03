@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://right_side/Vent.gd" type="Script" id=1]
+[ext_resource path="res://back/Locker.gd" type="Script" id=1]
+[ext_resource path="res://right_side/hatch.png" type="Texture" id=2]
 
 [node name="Exit" type="Control"]
 anchor_right = 1.0
@@ -10,17 +11,28 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 511.364, 302.258 )
+rotation = 1.5708
+scale = Vector2( 0.373402, 0.500729 )
+texture = ExtResource( 2 )
+
 [node name="Hatch" type="Button" parent="."]
-margin_left = 402.602
-margin_top = 160.66
-margin_right = 597.602
-margin_bottom = 351.66
+margin_left = 418.0
+margin_top = 229.0
+margin_right = 567.0
+margin_bottom = 359.0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Return" type="Button" parent="."]
-margin_left = 1.0
-margin_top = 520.0
-margin_right = 1029.0
-margin_bottom = 598.0
+margin_left = 0.29895
+margin_top = 525.609
+margin_right = 1028.3
+margin_bottom = 603.609
+flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }

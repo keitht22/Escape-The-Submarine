@@ -11,9 +11,9 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 511.042, 300.123 )
+position = Vector2( 512.407, 300.396 )
 rotation = -1.5708
-scale = Vector2( 0.369925, 0.494567 )
+scale = Vector2( 0.372296, 0.500166 )
 texture = ExtResource( 2 )
 
 [node name="Panel" type="Button" parent="Sprite"]
@@ -22,6 +22,15 @@ margin_top = -551.0
 margin_right = 263.0
 margin_bottom = -393.0
 flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Locker" type="Button" parent="Sprite"]
+margin_left = -238.0
+margin_top = -257.0
+margin_right = 487.0
+margin_bottom = 75.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -49,5 +58,6 @@ rotation = 0.487482
 scale = Vector2( 0.0245673, 0.022355 )
 texture = ExtResource( 3 )
 [connection signal="pressed" from="Sprite/Panel" to="." method="_on_Panel_pressed"]
+[connection signal="pressed" from="Sprite/Locker" to="." method="_on_Locker_pressed"]
 [connection signal="pressed" from="Left" to="." method="_on_Left_pressed"]
 [connection signal="pressed" from="Right" to="." method="_on_Right_pressed"]

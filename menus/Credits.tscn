@@ -13,7 +13,7 @@ use_mipmaps = true
 use_filter = true
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=2]
 size = 30
 outline_size = 3
 outline_color = Color( 0.364706, 0.815686, 0.976471, 1 )
@@ -21,7 +21,7 @@ use_mipmaps = true
 use_filter = true
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=3]
 size = 36
 outline_size = 3
 outline_color = Color( 0.443137, 0.392157, 0.654902, 1 )
@@ -72,7 +72,7 @@ margin_left = -423.5
 margin_top = -116.0
 margin_right = 423.5
 margin_bottom = 116.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 2 )
 text = "Curtis Howard
 
 Paige Gehlhausen
@@ -91,13 +91,13 @@ margin_left = -423.5
 margin_top = -114.653
 margin_right = 423.5
 margin_bottom = 117.347
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.952941, 0.976471, 0.980392, 1 )
 text = "Scripting
 
-Environment  Assets
+Environmental  Assets
 
-Music / Shading"
+Music , Shading/Color, Menus,  Navigation "
 align = 2
 __meta__ = {
 "_edit_use_anchors_": false

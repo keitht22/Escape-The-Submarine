@@ -13,3 +13,7 @@ func _on_Left_pressed():
 func _on_Right_pressed():
 # warning-ignore:return_value_discarded
 	get_tree().change_scene("res://cockpit/Cockpit.tscn")
+
+
+func _on_chest_pressed():
+	get_tree().change_scene("res://left_side/Chest.tscn")
