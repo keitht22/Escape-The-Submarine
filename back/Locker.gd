@@ -2,7 +2,10 @@ extends Control
 
 
 func _ready():
-	pass
+	if Global.hasBag == true:
+		$open_locker/bag.visible = false
+	if Global.hasMagnet == true:
+		$open_locker/magnet.visible = false
 
 
 func _on_Return_pressed():

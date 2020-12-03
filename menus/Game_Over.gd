@@ -8,6 +8,10 @@ func _ready():
 
 
 func _on_Try_Again_pressed():
+	Global.hasBag = false
+	Global.hasKey = false
+	Global.hasMagnet = false
+	Global.hasWheel = false
 	timer.start()
 	music.play()
 	get_tree().change_scene("res://cockpit/Cockpit.tscn")

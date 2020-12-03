@@ -2,8 +2,8 @@ extends Control
 
 
 func _ready():
-	pass
-
+	if Global.hasWheel == true:
+		$Chest/Wheel.visible = false
 
 func _on_wheel_pressed():
 	Global.hasWheel = true
