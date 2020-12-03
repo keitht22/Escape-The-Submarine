@@ -27,4 +27,4 @@ Assets, or resources used: All resources were drawn by hand and colored or shade
 At this time there are no plans to develop the game further
 
 #	Created by:
-Curtis Howard, Paige Gehlhausen, Tyler Keith
+Curtis Howard (Scripting), Paige Gehlhausen (Assets), Tyler Keith (Color/Shading, Sound, Navigation)
