@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://back/Back.gd" type="Script" id=1]
 [ext_resource path="res://back/back_main.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://items/wheel.png" type="Texture" id=5]
 [ext_resource path="res://items/bag.png" type="Texture" id=6]
 [ext_resource path="res://items/key.png" type="Texture" id=7]
+[ext_resource path="res://items/backpack.png" type="Texture" id=8]
 
 [node name="Back" type="Control"]
 script = ExtResource( 1 )
@@ -35,6 +36,7 @@ margin_left = -238.0
 margin_top = -257.0
 margin_right = 487.0
 margin_bottom = 75.0
+flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -107,11 +109,14 @@ texture = ExtResource( 7 )
 [node name="ToggleInventory" type="Button" parent="."]
 anchor_left = 1.0
 anchor_right = 1.0
-margin_left = 880.016
-margin_top = 28.6055
-margin_right = 953.016
-margin_bottom = 68.6055
-text = "Inventory"
+margin_left = 929.0
+margin_top = 86.0
+margin_right = 1965.0
+margin_bottom = 999.0
+rect_rotation = -90.0
+rect_scale = Vector2( 0.07, 0.082 )
+icon = ExtResource( 8 )
+flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }

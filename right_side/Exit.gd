@@ -1,5 +1,6 @@
 extends Control
 
+onready var music = get_node("/root/Global/Music")
 
 func _ready():
 	pass
@@ -10,8 +11,9 @@ func _on_Return_pressed():
 
 
 func _on_Hatch_pressed():
-	if Global.hasWheel == true:
+	if Global.hasWheel == true and Global.hasBag == true:
 		get_tree().change_scene("res://menus/Victory.tscn")
+		music.stop()
 
 
 func _on_ToggleInventory_pressed():
