@@ -23,6 +23,7 @@ func _on_Panel_pressed():
 func _on_Locker_pressed():
 	#	pop up that says it is locked
 	if Global.unlocked == true:
+# warning-ignore:return_value_discarded
 		get_tree().change_scene("res://back/Locker.tscn")
 
 

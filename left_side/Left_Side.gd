@@ -17,6 +17,7 @@ func _on_Right_pressed():
 
 func _on_chest_pressed():
 	if Global.hasKey == true:
+# warning-ignore:return_value_discarded
 		get_tree().change_scene("res://left_side/Chest.tscn")
 
 

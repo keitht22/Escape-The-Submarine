@@ -8,13 +8,16 @@ func _ready():
 	pass
 
 
+# warning-ignore:unused_argument
 func _process(delta):
 	if currentRun.size() == 3:
 		if currentRun == combination:
 			Global.unlocked = true
+			$Correct.play()
 			print("Storage has been unlocked")
 			currentRun = []
 		else:
+			$Wrong.play()
 			print("Incorrect combination, resetting")
 			currentRun = []
 	if currentRun.size() > 3:
